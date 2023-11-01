@@ -6,6 +6,7 @@ package cmd
 import (
 	"cli-tool/cmd/connect"
 	"cli-tool/cmd/read"
+	"cli-tool/cmd/subscribe"
 	"cli-tool/cmd/write"
 	"os"
 
@@ -32,6 +33,7 @@ func addSubcommands() {
 	rootCmd.AddCommand(connect.ConnectCmd)
 	rootCmd.AddCommand(read.ReadCmd)
 	rootCmd.AddCommand(write.WriteCmd)
+	rootCmd.AddCommand(subscribe.SubscribeCmd)
 }
 
 func init() {
