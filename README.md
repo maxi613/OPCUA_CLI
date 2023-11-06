@@ -3,7 +3,7 @@ A CLI-Tool to test OPC functions.
 
 Based on the native Go library: https://github.com/gopcua/opcua
 
-Test the new fist version under: https://github.com/maxi613/OPCUA_CLI/tags
+Test the fist version under: https://github.com/maxi613/OPCUA_CLI/tags
 
 ## Quick Start
 ### Connect
