@@ -1,5 +1,5 @@
 /*
-Copyright © 2023 Maximilian Wiegand HERE <EMAIL ADDRESS>
+Copyright © 2023 Maximilian Wiegand wiegandmaximilian@gmail.com
 */
 package cmd
 
