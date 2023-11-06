@@ -7,6 +7,7 @@ import (
 	globalvar "cli-tool/globalVar"
 	"context"
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/gopcua/opcua"
@@ -42,6 +43,20 @@ func callFunction(url string, methodID string, objectID string) error {
 	}
 	defer c.Close(ctx)
 
+	req := &ua.CallMethodRequest{
+		ObjectID:       ua.NewStringNodeID(2, "main"),
+		MethodID:       ua.NewStringNodeID(2, "even"),
+		InputArguments: []*ua.Variant{},
+	}
+
+	resp, err := c.Call(ctx, req)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if got, want := resp.StatusCode, ua.StatusOK; got != want {
+		log.Fatalf("got status %v want %v", got, want)
+	}
+
 	return nil
 }
 
@@ -51,7 +66,16 @@ var CallCmd = &cobra.Command{
 	Short: "Executes an opc ua function",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("call called")
+		if url, err := getUrl(); err != nil {
+			fmt.Println(err)
+		} else {
+
+			fmt.Println(fmt.Sprintf("Entered Node-ID: %s", methodID))
+
+			if err := callFunction(url, methodID, objectID); err != nil {
+				fmt.Println(err)
+			}
+		}
 	},
 }
 
