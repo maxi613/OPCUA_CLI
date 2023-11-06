@@ -4,6 +4,7 @@ Copyright © 2023 Maximilian Wiegand wiegandmaximilian@gmail.com
 package cmd
 
 import (
+	"cli-tool/cmd/call"
 	"cli-tool/cmd/connect"
 	"cli-tool/cmd/read"
 	"cli-tool/cmd/subscribe"
@@ -34,6 +35,7 @@ func addSubcommands() {
 	rootCmd.AddCommand(read.ReadCmd)
 	rootCmd.AddCommand(write.WriteCmd)
 	rootCmd.AddCommand(subscribe.SubscribeCmd)
+	rootCmd.AddCommand(call.CallCmd)
 }
 
 func init() {
