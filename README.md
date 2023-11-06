@@ -39,8 +39,12 @@ The standard value for interval is 1000. The unit is in milliseconds.
 
 | Feature  | Stauts |
 | :-------------: | :-------------: |
-| Read  | <span style="color: green"> X </span> |
+| Read  | X|
 | Write  | X |
+| Subscribtion| X |
+| Call Functions| Planend|
+|Browse Nodes| Planned|
+|Browse Endpoints|Planned|
 
 
 
