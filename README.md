@@ -43,7 +43,7 @@ The standard value for interval is 1000. The unit is in milliseconds.
 | Read  | X|
 | Write  | X |
 | Subscribtion| X |
-| Call Functions| Planend|
+| Call Functions| Planned|
 |Browse Nodes| Planned|
 |Browse Endpoints|Planned|
 
