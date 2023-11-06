@@ -5,7 +5,8 @@ Based on the native Go library: https://github.com/gopcua/opcua
 
 Test the new fist version under: https://github.com/maxi613/OPCUA_CLI/tags
 
-## Connect
+## Quick Start
+### Connect
 
 To start with testing some functions you have to register first a connection. 
 You can do this by entering the following code in the command line:
@@ -14,7 +15,7 @@ You can do this by entering the following code in the command line:
 
 If it was succesfull you will get a message back. 
 
-## Write
+### Write
 
 So far it is only possible to write an variable with the type of integer. 
 Use the subcommand `write` with the flag `-n` to tell the Node-ID and `-v` to enter the value. 
@@ -22,14 +23,14 @@ If the operation was successful you will get back the statuscode `0x0`.
 
 `cli-tool write -n "ns=4;i=7" -v 2`
 
-## Read
+### Read
 
 It is possible to read all type of varliables. 
 You only have to specify the Node-ID with the flag `-n`
 
 `cli-tool read -n "ns=4;i=7"`
 
-## Subscribe 
+### Subscribe 
 With a subscribtion is possible to monitor all kind of variables. Enter `subscribe` as subcommand with the flag `-n` to specify again the Node-ID and with the flag `-i` you can enter an monitor interval. 
 The standard value for interval is 1000. The unit is in milliseconds. 
 
