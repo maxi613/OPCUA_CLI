@@ -35,7 +35,7 @@ The standard value for interval is 1000. The unit is in milliseconds.
 
 `cli-tool subscribe -n "ns=4;i=7" -i 10`
 
-## Stauts Features
+## Status Features
 
 | Feature  | Stauts |
 | :-------------: | :-------------: |
