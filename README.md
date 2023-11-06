@@ -37,7 +37,10 @@ The standard value for interval is 1000. The unit is in milliseconds.
 
 ## Stauts Features
 
-
+| Feature  | Stauts |
+| :-------------: | :-------------: |
+| Read  | <span style="color: green"> X </span> |
+| Write  | X |
 
 
 
